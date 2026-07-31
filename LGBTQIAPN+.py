@@ -65,21 +65,21 @@ def lgbt():
 
 resposta = input(f"Você aceita o presente? (s/n): ")
 
-if resposta == "s":
+if resposta == "s" or resposta == "S":
     for i in range(4):
         print(f"PLAYSTATION!", end=" ", flush=True)
         t.sleep(1.25)
 
-    presente = r.randint(0,3)
+    presente = r.randint(1,4)
 
-    if presente == 0: print(f"\nO presente está vazio, que pena...")
+    if presente == 1: print(f"\nO presente está vazio, que pena...")
 
-    elif presente == 1: print(f"\nParabéns mano, você ganhou um PlayStation 5 Pro com GTA 6 comprado na pré-venda. Aproveite!")
+    elif presente == 2: print(f"\nParabéns, você ganhou um PlayStation 5 Pro com GTA 6 comprado na pré-venda. Aproveite!")
 
-    elif presente == 2: print (f"\nOloko mano, você adquiriu os poderes malignos do Tio Léo e do Geraldo. Use-os com sabedoria e moderação...")
+    elif presente == 3: print (f"\nOloko, você adquiriu os poderes malignos do Tio Léo e do Geraldo. Use-os com sabedoria e moderação...")
 
     else: lgbt()
 
-elif resposta == "n": print(f"Evapore então, seu merda.")
+elif resposta == "n" or resposta == "N": print(f"Evapore então, seu merda.")
 
 else: print(f"Você só tinha UM trabalho, que era digitar o solicitado, e não o fez... (s/n)")
