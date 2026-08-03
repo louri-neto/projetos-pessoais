@@ -3,52 +3,44 @@ import random as r
 import time as t
 
 def lgbt():
-    cor_vermelho = "#E40303"
-    cor_laranja = "#FF8C00"
-    cor_amarelo = "#FFED00"
-    cor_verde = "#008026"
-    cor_azul = "#004DFF"
-    cor_roxo = "#750787"
-
     janela = tk.Tk()
     janela.title("Se você leu isto, você é ainda mais LGBTQIAPN+")
     janela.state("zoomed")
-    janela.configure(bg="white")
     janela.resizable(False, False)
     
     vermelho = tk.Frame(
         janela,
-        bg=cor_vermelho
+        bg="#E40303"
     )
     vermelho.pack(expand=True, fill="both")
     
     laranja = tk.Frame(
         janela,
-        bg=cor_laranja
+        bg="#FF8C00"
     )
     laranja.pack(expand=True, fill="both")
 
     amarelo = tk.Frame(
         janela,
-        bg=cor_amarelo
+        bg="#FFED00"
     )
     amarelo.pack(expand=True, fill="both")
 
     verde = tk.Frame(
         janela,
-        bg=cor_verde
+        bg="#008026"
     )
     verde.pack(expand=True, fill="both")
 
     azul = tk.Frame(
         janela,
-        bg=cor_azul,
+        bg="#004DFF"
     )
     azul.pack(expand=True, fill="both")
 
     roxo = tk.Frame(
         janela,
-        bg=cor_roxo
+        bg="#750787"
     )
     roxo.pack(expand=True, fill="both")
 
@@ -72,14 +64,20 @@ if resposta == "s" or resposta == "S":
 
     presente = r.randint(1,4)
 
-    if presente == 1: print(f"\nO presente está vazio, que pena...")
+    if presente == 1:
+        print(f"\nO presente está vazio, que pena...")
 
-    elif presente == 2: print(f"\nParabéns, você ganhou um PlayStation 5 Pro com GTA 6 comprado na pré-venda. Aproveite!")
+    elif presente == 2:
+        print(f"\nParabéns, você ganhou um PlayStation 5 Pro com GTA 6 comprado na pré-venda. Aproveite!")
 
-    elif presente == 3: print (f"\nOloko, você adquiriu os poderes malignos do Tio Léo e do Geraldo. Use-os com sabedoria e moderação...")
+    elif presente == 3:
+        print(f"\nOloko, você adquiriu os poderes malignos do Tio Léo e do Geraldo. Use-os com sabedoria e moderação...")
 
-    else: lgbt()
+    else:
+        lgbt()
 
-elif resposta == "n" or resposta == "N": print(f"Evapore então, seu merda.")
+elif resposta == "n" or resposta == "N":
+    print(f"Evapore então, seu merda.")
 
-else: print(f"Você só tinha UM trabalho, que era digitar o solicitado, e não o fez... (s/n)")
+else:
+    print(f"Você só tinha UM trabalho, que era digitar o solicitado, e não o fez... (s/n)")
