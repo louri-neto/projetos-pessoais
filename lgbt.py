@@ -3,7 +3,7 @@ import random as r
 import time as t
 
 def lgbt():
-    janela = tk.Tk()
+	janela = tk.Tk()
     janela.title("Se você leu isto, você é ainda mais LGBTQIAPN+")
     janela.state("zoomed")
     janela.resizable(False, False)
