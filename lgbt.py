@@ -3,53 +3,30 @@ import random as r
 import time as t
 
 def lgbt():
-	janela = tk.Tk()
+    janela = tk.Tk()
     janela.title("Se você leu isto, você é ainda mais LGBTQIAPN+")
-    janela.state("zoomed")
     janela.resizable(False, False)
-    
-    vermelho = tk.Frame(
-        janela,
-        bg="#E40303"
-    )
-    vermelho.pack(expand=True, fill="both")
-    
-    laranja = tk.Frame(
-        janela,
-        bg="#FF8C00"
-    )
-    laranja.pack(expand=True, fill="both")
+    janela.state("zoomed")
 
-    amarelo = tk.Frame(
-        janela,
-        bg="#FFED00"
-    )
-    amarelo.pack(expand=True, fill="both")
+    largura_tela = janela.winfo_screenwidth()
 
-    verde = tk.Frame(
-        janela,
-        bg="#008026"
-    )
-    verde.pack(expand=True, fill="both")
+    tamanho_fonte = int(largura_tela * 0.025)
 
-    azul = tk.Frame(
-        janela,
-        bg="#004DFF"
-    )
-    azul.pack(expand=True, fill="both")
+    cores = ["#E40303", "#FF8C00", "#FFED00", "#008026", "#004DFF", "#750787"]
 
-    roxo = tk.Frame(
-        janela,
-        bg="#750787"
-    )
-    roxo.pack(expand=True, fill="both")
+    for cor in cores:
+        frame = tk.Frame(
+            janela,
+            bg=cor
+        )
+        frame.pack(expand=True, fill="both")
 
     mensagem = tk.Label(
         janela,
         text="Você é LGBTQIAPN+",
         bg="white",
         fg="black",
-        font=("Comic Sans MS", 24) 
+        font=("Comic Sans MS", tamanho_fonte)
     )
     mensagem.place(relx=0.5, rely=0.5, anchor="center")
 
@@ -81,3 +58,4 @@ elif resposta == "n" or resposta == "N":
 
 else:
     print(f"Você só tinha UM trabalho, que era digitar o solicitado, e não o fez... (s/n)")
+
