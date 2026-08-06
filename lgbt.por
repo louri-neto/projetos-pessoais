@@ -39,7 +39,7 @@ programa {
   }
 
   funcao inicio() {
-    /*inteiro presente, i
+    inteiro presente, i
     caracter resposta
 
     escreva("Você aceita o presente? (s/n): ")
@@ -53,19 +53,19 @@ programa {
       
       presente = u.sorteia(0, 3)
 
-      se (presente == 0) escreva("\nO presente está vazio, que pena...")
-      
-      senao se (presente == 1) escreva("\nParabéns mano, você ganhou um PlayStation 5 Pro com GTA 6 comprado na pré-venda. Aproveite!")
-
-      senao se (presente == 2) escreva("\nOloko mano, você adquiriu os poderes malignos do Tio Léo e do Geraldo. Use-os com sabedoria e moderação...")
-    
-      senao lgbt()
+      se (presente == 0) {
+        escreva("\nO presente está vazio, que pena...")
+      } senao se (presente == 1) {
+        escreva("\nParabéns mano, você ganhou um PlayStation 5 Pro com GTA 6 comprado na pré-venda. Aproveite!")
+      } senao se (presente == 2) {
+        escreva("\nOloko mano, você adquiriu os poderes malignos do Tio Léo e do Geraldo. Use-os com sabedoria e moderação...")
+      } senao {
+        lgbt()
+      }
+    } senao se (resposta == "n") {
+      escreva("Evapore então, seu merda.")
+    } senao {
+      escreva("Você só tinha UM trabalho, que era digitar o solicitado, e não o fez... (s/n)")
     }
-
-    senao se (resposta == "n") escreva("Evapore então, seu merda.")
-
-    senao escreva("Você só tinha UM trabalho, que era digitar o solicitado, e não o fez... (s/n)")*/
-
-    lgbt()
   }
 }
