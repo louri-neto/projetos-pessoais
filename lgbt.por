@@ -3,6 +3,15 @@ programa {
   inclua biblioteca Util --> u
 
   funcao lgbt() {
+    inteiro cores[6][3] = {
+      {228, 3, 3},
+      {255, 140, 0},
+      {255, 237, 0},
+      {0, 128, 38},
+      {0, 76, 255},
+      {119, 0, 136}
+    }
+
     g.iniciar_modo_grafico(verdadeiro)
     g.definir_dimensoes_janela(640, 480)
     
@@ -10,23 +19,10 @@ programa {
     g.definir_tamanho_texto(40)
 
     enquanto (verdadeiro) {
-      g.definir_cor(g.criar_cor(228, 3, 3))
-      g.desenhar_retangulo(0, 0, 640, 80, falso, verdadeiro)
-
-      g.definir_cor(g.criar_cor(255, 140, 0))
-      g.desenhar_retangulo(0, 80, 640, 80, falso, verdadeiro)
-
-      g.definir_cor(g.criar_cor(255, 237, 0))
-      g.desenhar_retangulo(0, 160, 640, 80, falso, verdadeiro)
-
-      g.definir_cor(g.criar_cor(0, 128, 38))
-      g.desenhar_retangulo(0, 240, 640, 80, falso, verdadeiro)
-
-      g.definir_cor(g.criar_cor(0, 76, 255))
-      g.desenhar_retangulo(0, 320, 640, 80, falso, verdadeiro)
-
-      g.definir_cor(g.criar_cor(119, 0, 136))
-      g.desenhar_retangulo(0, 400, 640, 80, falso, verdadeiro)
+      para (inteiro i = 0; i < 6 ; i++) {
+        g.definir_cor(g.criar_cor(cores[i][0], cores[i][1], cores[i][2]))
+        g.desenhar_retangulo(0, i * 80, 640, 480, falso, verdadeiro)
+      }
 
       g.definir_cor(g.COR_BRANCO)
       g.desenhar_retangulo(120, 200, 410, 80, falso, verdadeiro)
