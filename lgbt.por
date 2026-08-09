@@ -8,6 +8,7 @@ programa {
     
     g.definir_fonte_texto("Comic Sans MS")
     g.definir_tamanho_texto(48)
+
     enquanto (verdadeiro) {
       inteiro cores[6] = {0xE40303, 0xFF8C00, 0xFFED00, 0x008026, 0x004DFF, 0x750787}
       cadeia texto = "Você é LGBTQIAPN+"
