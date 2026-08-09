@@ -3,39 +3,37 @@ programa {
   inclua biblioteca Util --> u
 
   funcao lgbt() {
-    inteiro cores[6][3] = {
-      {228, 3, 3},
-      {255, 140, 0},
-      {255, 237, 0},
-      {0, 128, 38},
-      {0, 76, 255},
-      {119, 0, 136}
-    }
-
     g.iniciar_modo_grafico(verdadeiro)
-    g.definir_dimensoes_janela(640, 480)
+    g.definir_dimensoes_janela(800, 600)
     
     g.definir_fonte_texto("Comic Sans MS")
-    g.definir_tamanho_texto(40)
-
+    g.definir_tamanho_texto(48)
     enquanto (verdadeiro) {
+      inteiro cores[6] = {0xE40303, 0xFF8C00, 0xFFED00, 0x008026, 0x004DFF, 0x750787}
+      cadeia texto = "Você é LGBTQIAPN+"
+      inteiro largura = g.largura_texto(texto)
+      inteiro altura = 32
+      inteiro x = 400 - largura / 2
+      inteiro y = 300 + altura / 2
+      inteiro transbordamento = 12
+
       para (inteiro i = 0; i < 6 ; i++) {
-        g.definir_cor(g.criar_cor(cores[i][0], cores[i][1], cores[i][2]))
-        g.desenhar_retangulo(0, i * 80, 640, 480, falso, verdadeiro)
+        g.definir_cor(cores[i])
+        g.desenhar_retangulo(0, i * 100, 800, 100, falso, verdadeiro)
       }
 
       g.definir_cor(g.COR_BRANCO)
-      g.desenhar_retangulo(120, 200, 410, 80, falso, verdadeiro)
+      g.desenhar_retangulo(x - transbordamento, y - altura - transbordamento, largura + transbordamento * 2, altura + transbordamento * 2, falso, verdadeiro)
 
       g.definir_cor(g.COR_PRETO)
-      g.desenhar_texto(127, 253, "Você é LGBTQIAPN+")
+      g.desenhar_texto(x, y, texto)
 
       g.renderizar()
     }
   }
 
   funcao inicio() {
-    inteiro presente, i
+    /*inteiro presente, i
     caracter resposta
 
     escreva("Você aceita o presente? (s/n): ")
@@ -62,6 +60,7 @@ programa {
       escreva("Evapore então, seu merda.")
     } senao {
       escreva("Você só tinha UM trabalho, que era digitar o solicitado, e não o fez... (s/n)")
-    }
+    } */
+    lgbt()
   }
 }
