@@ -33,34 +33,41 @@ programa {
   }
 
   funcao inicio() {
-    /*inteiro presente, i
+    inteiro presente, i
     caracter resposta
 
     escreva("Você aceita o presente? (s/n): ")
     leia(resposta)
     
-    se (resposta == "s") {
+    se (resposta == "s" ou resposta == "S") {
       para (i = 0; i < 4; i++) {
         escreva("PLAYSTATION! ")
         u.aguarde(1250)
       }
       
-      presente = u.sorteia(0, 3)
+      presente = 3
 
-      se (presente == 0) {
-        escreva("\nO presente está vazio, que pena...")
-      } senao se (presente == 1) {
-        escreva("\nParabéns mano, você ganhou um PlayStation 5 Pro com GTA 6 comprado na pré-venda. Aproveite!")
-      } senao se (presente == 2) {
-        escreva("\nOloko mano, você adquiriu os poderes malignos do Tio Léo e do Geraldo. Use-os com sabedoria e moderação...")
-      } senao {
-        lgbt()
+      escolha (presente) {
+        caso 1:
+          escreva("\nParabéns mano, você ganhou um PlayStation 5 Pro com GTA 6 comprado na pré-venda. Aproveite!")
+          pare
+
+        caso 2:
+          escreva("\nOloko mano, você adquiriu os poderes malignos do Tio Léo e do Geraldo. Use-os com sabedoria e moderação...")
+          pare
+          
+        caso 3:
+          lgbt()
+          pare
+
+        caso contrario:
+          escreva("\nO presente está vazio, que pena...")
+          pare
       }
-    } senao se (resposta == "n") {
+    } senao se (resposta == "n" ou resposta == "N") {
       escreva("Evapore então, seu merda.")
     } senao {
       escreva("Você só tinha UM trabalho, que era digitar o solicitado, e não o fez... (s/n)")
-    } */
-    lgbt()
+    }
   }
 }
