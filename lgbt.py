@@ -30,23 +30,24 @@ if resposta == "s" or resposta == "S":
         print("PLAYSTATION!", end=" ", flush=True)
         t.sleep(1.25)
 
-    presente = r.randint(1,4)
+    presente = r.randint(0,3)
 
-    if presente == 1:
-        print("\nO presente está vazio, que pena...")
+    match presente:
+        case 1:
+            print("\nParabéns, você ganhou um PlayStation 5 Pro com GTA 6 comprado na pré-venda. Aproveite!")
 
-    elif presente == 2:
-        print("\nParabéns, você ganhou um PlayStation 5 Pro com GTA 6 comprado na pré-venda. Aproveite!")
+        case 2:
+            print("\nOloko, você adquiriu os poderes malignos do Tio Léo e do Geraldo. Use-os com sabedoria e moderação...")
 
-    elif presente == 3:
-        print("\nOloko, você adquiriu os poderes malignos do Tio Léo e do Geraldo. Use-os com sabedoria e moderação...")
+        case 3:
+            while True:
+                lgbt()
 
-    else:
-        lgbt()
+        case _:
+            print("\nO presente está vazio, que pena...")
 
 elif resposta == "n" or resposta == "N":
     print("Evapore então, seu merda.")
 
 else:
     print("Você só tinha UM trabalho, que era digitar o solicitado, e não o fez... (s/n)")
-
