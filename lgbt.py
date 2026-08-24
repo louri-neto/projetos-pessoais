@@ -15,47 +15,38 @@ def lgbt():
     cores = ["#E40303", "#FF8C00", "#FFED00", "#008026", "#004DFF", "#750787"]
 
     for cor in cores:
-        frame = tk.Frame(
-            janela,
-            bg=cor
-        )
+        frame = tk.Frame(janela, bg=cor)
         frame.pack(expand=True, fill="both")
 
-    mensagem = tk.Label(
-        janela,
-        text="Você é LGBTQIAPN+",
-        bg="white",
-        fg="black",
-        font=("Comic Sans MS", tamanho_fonte)
-    )
+    mensagem = tk.Label(janela, text="Você é LGBTQIAPN+", bg="white", fg="black", font=("Comic Sans MS", tamanho_fonte))
     mensagem.place(relx=0.5, rely=0.5, anchor="center")
 
     janela.mainloop()
 
-resposta = input(f"Você aceita o presente? (s/n): ")
+resposta = input("Você aceita o presente? (s/n): ")
 
 if resposta == "s" or resposta == "S":
     for i in range(4):
-        print(f"PLAYSTATION!", end=" ", flush=True)
+        print("PLAYSTATION!", end=" ", flush=True)
         t.sleep(1.25)
 
     presente = r.randint(1,4)
 
     if presente == 1:
-        print(f"\nO presente está vazio, que pena...")
+        print("\nO presente está vazio, que pena...")
 
     elif presente == 2:
-        print(f"\nParabéns, você ganhou um PlayStation 5 Pro com GTA 6 comprado na pré-venda. Aproveite!")
+        print("\nParabéns, você ganhou um PlayStation 5 Pro com GTA 6 comprado na pré-venda. Aproveite!")
 
     elif presente == 3:
-        print(f"\nOloko, você adquiriu os poderes malignos do Tio Léo e do Geraldo. Use-os com sabedoria e moderação...")
+        print("\nOloko, você adquiriu os poderes malignos do Tio Léo e do Geraldo. Use-os com sabedoria e moderação...")
 
     else:
         lgbt()
 
 elif resposta == "n" or resposta == "N":
-    print(f"Evapore então, seu merda.")
+    print("Evapore então, seu merda.")
 
 else:
-    print(f"Você só tinha UM trabalho, que era digitar o solicitado, e não o fez... (s/n)")
+    print("Você só tinha UM trabalho, que era digitar o solicitado, e não o fez... (s/n)")
 
