@@ -45,7 +45,7 @@ programa {
         u.aguarde(1250)
       }
       
-      presente = 3
+      presente = u.sorteia(0,3)
 
       escolha (presente) {
         caso 1:
