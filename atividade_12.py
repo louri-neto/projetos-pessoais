@@ -6,7 +6,7 @@ def questão6():
 def questão7():
     salário = float(input("Salário: "))
 
-    if salário > 1250.0:
+    if salário > 1250:
         aumento = 1.1
 
     else: 
@@ -26,7 +26,7 @@ def questão8():
         print(f"Resultado: {operadores[operação](n[0], n[1])}")
 
     else:
-        print("Operação inválida")
+        raise ValueError("Operação inválida")
 
 def questão9():
     valor_da_casa = float(input("Valor da casa: "))
@@ -40,8 +40,33 @@ def questão9():
 
 def questão10():
     kwh = float(input("kWh consumidos: "))
-    instalação = input("Tipo de instalação: ")
+    instalação = input("Tipo de instalação: ").upper()
 
-    
+    match (instalação):
+        case "R":
+            if kwh <= 500:
+                preço_kwh = 0.4
+
+            else:
+                preço_kwh = 0.65
+
+        case "C":
+            if kwh <= 1000:
+                preço_kwh = 0.55
+
+            else:
+                preço_kwh = 0.6
+
+        case "I":
+            if kwh <= 5000:
+                preço_kwh = 0.55
+
+            else:
+                preço_kwh = 0.6
+
+        case _:
+            raise ValueError("Tipo de instalação inválida")
+
+    print(f"Preço a pagar: {kwh * preço_kwh}")
 
 questão10()
