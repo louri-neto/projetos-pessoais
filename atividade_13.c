@@ -7,12 +7,14 @@
 #endif
 
 void questao11() {
-    char operacao;
+    int operacao;
 
-    printf("Operações\n+ - Adição\n- - Subtração\n* - Multiplicação\n/ - Divisão\nOpção: ");
-    scanf(" %c", operacao);
+    printf("1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Sair\nOpção: ");
+    scanf("%d", operacao);
 
-    
+    if (operacao >= 1 && operacao <= 4) {
+        
+    }
 }
 
 void questao14() {
