@@ -7,14 +7,60 @@
 #endif
 
 void questao11() {
-    int operacao;
+    int operacao, x;
+    char resposta;
 
-    printf("1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Sair\nOpção: ");
-    scanf("%d", operacao);
+    do {
+        printf("1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Sair\nOpção: ");
+        scanf("%d", &operacao);
 
-    if (operacao >= 1 && operacao <= 4) {
+        if (operacao >= 1 && operacao <= 4) {
+            printf("Número: ");
+            scanf("%d", &x);
+
+            switch (operacao) {
+                case 1:
+                    for (int i = 1; i <= 10; i++) {
+                        printf("%d + %d = %d\n", x, i, x + i);
+                    }
+
+                    break;
+
+                case 2:
+                    for (int i = 1; i <= 10; i++) {
+                        printf("%d - %d = %d\n", i, x, i - x);
+                    }
+
+                    break;
+
+                case 3:
+                    for (int i = 1; i <= 10; i++) {
+                        printf("%d * %d = %d\n", x, i, x * i);
+                    }
+
+                    break;
+
+                case 4:
+                    for (int i = 1; i <= 10; i++) {
+                        printf("%d / %d = %d\n", x * i, x, i);
+                    }
+
+                    break;
+
+                default:
+                    printf("Operação inválida");
+
+                    break;
+            }
+
+            printf("Continuar? (s/n): ");
+            scanf(" %c", &resposta);
+
+            if (resposta == 'n' || resposta == 'N') break;
+        }
+
         
-    }
+    } while (operacao != 5);
 }
 
 void questao14() {
