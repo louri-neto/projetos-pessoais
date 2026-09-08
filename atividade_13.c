@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 #ifdef _WIN32
     #include <windows.h>
@@ -63,6 +64,48 @@ void questao11() {
     } while (operacao != 5);
 }
 
+void questao12() {
+    int n, primo; 
+    
+    printf("Número: ");
+    scanf("%d", &n);
+
+    if (n <= 1) primo = 0;
+
+    else if (n == 2) primo = 1;
+
+    else if (n % 2 == 0) primo = 0;
+
+    else {
+        for (int i = 3; i < n; i += 2) {
+            if (n % i == 0) {
+                primo = 0;
+                break;
+            }
+        }
+    }
+
+    if (primo) printf("É primo");
+
+    else printf("Não é primo");
+}
+
+void questao13() {
+    double n; 
+    double b = 2.0;
+    double p;
+
+    printf("Número: ");
+    scanf("%lf", &n);
+
+    while (fabs(b * b - n) > 0.0001) {
+        p = (b + (n / b)) / 2;
+        b = p;
+    }
+
+    printf("Raiz: %.4lf", b);
+}
+
 void questao14() {
     int n[2];
 
@@ -76,6 +119,25 @@ void questao14() {
     printf("Resto: %d", n[0]);
 }
 
+void questao15() {
+    int n = 0;
+
+    scanf("%d", &n);
+
+    int original = n;
+    int reverso = 0;
+    int ultimo = 0;
+
+    while (original != 0) {
+        reverso = reverso * 10 + (original % 10);
+        original /= 10;
+    }
+
+    if (n == reverso) printf("É um palindromo");
+
+    else printf("Não é um palindromo");
+}
+
 int main() {
     #ifdef _WIN32
         SetConsoleCP(65001);
@@ -84,7 +146,7 @@ int main() {
         setlocale(LC_ALL, "");
     #endif
 
-    questao11();
+    questao15();
 
     return 0;
 }
