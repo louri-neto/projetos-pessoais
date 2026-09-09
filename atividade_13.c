@@ -12,10 +12,16 @@ void questao11() {
     char resposta;
 
     do {
-        printf("1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Sair\nOpção: ");
+        printf(
+            "1 - Adição\n"
+            "2 - Subtração\n"
+            "3 - Multiplicação\n"
+            "4 - Divisão\n"
+            "5 - Sair\n"
+            "Opção: ");
         scanf("%d", &operacao);
 
-        if (operacao >= 1 && operacao <= 4) {
+        if (operacao != 5) {
             printf("Número: ");
             scanf("%d", &x);
 
@@ -28,8 +34,8 @@ void questao11() {
                     break;
 
                 case 2:
-                    for (int i = 1; i <= 10; i++) {
-                        printf("%d - %d = %d\n", i, x, i - x);
+                    for (int i = 0; i <= 10; i++) {
+                        printf("%d - %d = %d\n", i + x, x, i);
                     }
 
                     break;
@@ -65,7 +71,7 @@ void questao11() {
 }
 
 void questao12() {
-    int n, primo; 
+    int n, primo = 1; 
     
     printf("Número: ");
     scanf("%d", &n);
@@ -114,7 +120,7 @@ void questao14() {
         scanf("%d", &n[i]);
     } 
     
-    while (n[0] >= n[1]) n[0]-=n[1];
+    while (n[0] >= n[1]) n[0] -= n[1];
 
     printf("Resto: %d", n[0]);
 }
@@ -122,11 +128,11 @@ void questao14() {
 void questao15() {
     int n = 0;
 
+    printf("Número: ");
     scanf("%d", &n);
 
     int original = n;
     int reverso = 0;
-    int ultimo = 0;
 
     while (original != 0) {
         reverso = reverso * 10 + (original % 10);
@@ -146,7 +152,7 @@ int main() {
         setlocale(LC_ALL, "");
     #endif
 
-    questao15();
+    questao11();
 
     return 0;
 }
